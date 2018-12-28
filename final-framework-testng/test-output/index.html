@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Sample_test_Suite">
-              <span class="suite-name border-passed">Sample test Suite</span>
+              <span class="suite-name border-failed">Sample test Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,7 +91,40 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">9 methods,   9 passed</span>
+                    <span class="method-stats">11 methods, 2 failed,  1 skipped,  8 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Sample_test_Suite" class="hide-methods failed suite-Sample_test_Suite"> (hide)</a> <!-- hide-methods failed suite-Sample_test_Suite -->
+                      <a href="#" panel-name="suite-Sample_test_Suite" class="show-methods failed suite-Sample_test_Suite"> (show)</a> <!-- show-methods failed suite-Sample_test_Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Sample_test_Suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Sample_test_Suite" title="com.training.sanity.tests.ELTC_055_Careers" hash-for-method="ReportingTest">ReportingTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Sample_test_Suite" title="com.training.sanity.tests.ELTC_052_SessionCategories" hash-for-method="SessionCategoriesTest">SessionCategoriesTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Sample_test_Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Sample_test_Suite" class="hide-methods skipped suite-Sample_test_Suite"> (hide)</a> <!-- hide-methods skipped suite-Sample_test_Suite -->
+                      <a href="#" panel-name="suite-Sample_test_Suite" class="show-methods skipped suite-Sample_test_Suite"> (show)</a> <!-- show-methods skipped suite-Sample_test_Suite -->
+                    </span>
+                    <div class="method-list-content skipped suite-Sample_test_Suite">
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Sample_test_Suite" title="com.training.sanity.tests.LoginTests" hash-for-method="validLoginTest">validLoginTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-Sample_test_Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,47 +135,42 @@
                     <div class="method-list-content passed suite-Sample_test_Suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Sample_test_Suite" title="com.training.sanity.tests.ELTC_023_Add_users_course" hash-for-method="AddcourseTest">AddcourseTest</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Sample_test_Suite" title="com.training.sanity.tests.ELTC_053_Reporting" hash-for-method="ReportingTest">ReportingTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Sample_test_Suite" title="com.training.sanity.tests.ELTC_024_Courses_Categories" hash-for-method="coursecategoriesTest">coursecategoriesTest</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Sample_test_Suite" title="com.training.sanity.tests.ELTC_054_Teachers" hash-for-method="ReportingTest">ReportingTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Sample_test_Suite" title="com.training.sanity.tests.ELTC_025_Delete_category_icon" hash-for-method="createcourseTest">createcourseTest</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Sample_test_Suite" title="com.training.sanity.tests.ELTC_051_Userlist" hash-for-method="userlistTest">userlistTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Sample_test_Suite" title="com.training.sanity.tests.ELTC_022_Create_Course_link" hash-for-method="createcourseTest">createcourseTest</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Sample_test_Suite" title="com.training.sanity.tests.ELTC_053_Reporting" hash-for-method="validLoginTest">validLoginTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Sample_test_Suite" title="com.training.sanity.tests.ELTC_022_Create_Course_link" hash-for-method="validLoginTest">validLoginTest</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Sample_test_Suite" title="com.training.sanity.tests.ELTC_052_SessionCategories" hash-for-method="validLoginTest">validLoginTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Sample_test_Suite" title="com.training.sanity.tests.LoginTests" hash-for-method="validLoginTest">validLoginTest</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Sample_test_Suite" title="com.training.sanity.tests.ELTC_054_Teachers" hash-for-method="validLoginTest">validLoginTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Sample_test_Suite" title="com.training.sanity.tests.ELTC_024_Courses_Categories" hash-for-method="validLoginTest">validLoginTest</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Sample_test_Suite" title="com.training.sanity.tests.ELTC_055_Careers" hash-for-method="validLoginTest">validLoginTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Sample_test_Suite" title="com.training.sanity.tests.ELTC_023_Add_users_course" hash-for-method="validLoginTest">validLoginTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Sample_test_Suite" title="com.training.sanity.tests.ELTC_025_Delete_category_icon" hash-for-method="validLoginTest">validLoginTest</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Sample_test_Suite" title="com.training.sanity.tests.ELTC_051_Userlist" hash-for-method="validLoginTest">validLoginTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Sample_test_Suite -->
@@ -157,53 +185,99 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Sample_test_Suite" class="panel Sample_test_Suite">
-          <div class="suite-Sample_test_Suite-class-passed">
+          <div class="suite-Sample_test_Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.training.sanity.tests.ELTC_023_Add_users_course</span>
+              <img src="failed.png"/>
+              <span class="class-name">com.training.sanity.tests.ELTC_052_SessionCategories</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="AddcourseTest">
-                  </a> <!-- AddcourseTest -->
-                  <span class="method-name">AddcourseTest</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="validLoginTest">
-                  </a> <!-- validLoginTest -->
-                  <span class="method-name">validLoginTest</span>
+                  <a name="SessionCategoriesTest">
+                  </a> <!-- SessionCategoriesTest -->
+                  <span class="method-name">SessionCategoriesTest</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&quot;origin&quot;]/option[3]&quot;}
+  (Session info: chrome=71.0.3578.98)
+  (Driver info: chromedriver=2.44.609538 (b655c5a60b0b544917107a59d4153d4bf78e1b90),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.6.0&apos;, revision: &apos;6fbf3ec767&apos;, time: &apos;2017-09-27T15:28:36.4Z&apos;
+System info: host: &apos;IBM931-PC073D58&apos;, ip: &apos;192.168.1.2&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_152&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:62073}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=XP, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.44.609538 (b655c5a60b0b544917107a59d4153d4bf78e1b90), userDataDir=C:\Users\IBM_AD~1\AppData\Local\Temp\scoped_dir30244_652}, takesHeapSnapshot=true, unhandledPromptBehavior=ignore, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, version=71.0.3578.98, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 0ca2428a193be09479ae2ebd8c7ee18f
+*** Element info: {Using=xpath, value=//*[@id=&quot;origin&quot;]/option[3]}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:82)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:586)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:458)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:348)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy11.click(Unknown Source)
+	at com.training.pom.SessionscategoriesPOM.clicktesting(SessionscategoriesPOM.java:135)
+	at com.training.sanity.tests.ELTC_052_SessionCategories.SessionCategoriesTest(ELTC_052_SessionCategories.java:83)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Sample_test_Suite-class-passed -->
-          <div class="suite-Sample_test_Suite-class-passed">
+          </div> <!-- suite-Sample_test_Suite-class-failed -->
+          <div class="suite-Sample_test_Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.training.sanity.tests.ELTC_022_Create_Course_link</span>
+              <img src="failed.png"/>
+              <span class="class-name">com.training.sanity.tests.ELTC_055_Careers</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="createcourseTest">
-                  </a> <!-- createcourseTest -->
-                  <span class="method-name">createcourseTest</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="validLoginTest">
-                  </a> <!-- validLoginTest -->
-                  <span class="method-name">validLoginTest</span>
+                  <a name="ReportingTest">
+                  </a> <!-- ReportingTest -->
+                  <span class="method-name">ReportingTest</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&quot;6&quot;]/td[4]/a[1]&quot;}
+  (Session info: chrome=71.0.3578.98)
+  (Driver info: chromedriver=2.44.609538 (b655c5a60b0b544917107a59d4153d4bf78e1b90),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.6.0&apos;, revision: &apos;6fbf3ec767&apos;, time: &apos;2017-09-27T15:28:36.4Z&apos;
+System info: host: &apos;IBM931-PC073D58&apos;, ip: &apos;192.168.1.2&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_152&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:62482}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=XP, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.44.609538 (b655c5a60b0b544917107a59d4153d4bf78e1b90), userDataDir=C:\Users\IBM_AD~1\AppData\Local\Temp\scoped_dir29808_5319}, takesHeapSnapshot=true, unhandledPromptBehavior=ignore, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, version=71.0.3578.98, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 8bf5b0658e27fb12cc5a0ed25700e025
+*** Element info: {Using=xpath, value=//*[@id=&quot;6&quot;]/td[4]/a[1]}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:82)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:586)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:458)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:348)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy11.click(Unknown Source)
+	at com.training.pom.CareersPromotPOM.clicksubscriber(CareersPromotPOM.java:126)
+	at com.training.sanity.tests.ELTC_055_Careers.ReportingTest(ELTC_055_Careers.java:88)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Sample_test_Suite-class-passed -->
-          <div class="suite-Sample_test_Suite-class-passed">
+          </div> <!-- suite-Sample_test_Suite-class-failed -->
+          <div class="suite-Sample_test_Suite-class-skipped">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="skipped.png"/>
               <span class="class-name">com.training.sanity.tests.LoginTests</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -212,6 +286,44 @@
                   <a name="validLoginTest">
                   </a> <!-- validLoginTest -->
                   <span class="method-name">validLoginTest</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: unknown error: failed to change window state to maximized, current state is minimized
+  (Session info: chrome=71.0.3578.98)
+  (Driver info: chromedriver=2.44.609538 (b655c5a60b0b544917107a59d4153d4bf78e1b90),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.6.0&apos;, revision: &apos;6fbf3ec767&apos;, time: &apos;2017-09-27T15:28:36.4Z&apos;
+System info: host: &apos;IBM931-PC073D58&apos;, ip: &apos;192.168.1.2&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_152&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:61909}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=XP, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.44.609538 (b655c5a60b0b544917107a59d4153d4bf78e1b90), userDataDir=C:\Users\IBM_AD~1\AppData\Local\Temp\scoped_dir28060_26038}, takesHeapSnapshot=true, unhandledPromptBehavior=ignore, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, version=71.0.3578.98, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: f6f8164bb142ea8dc761234f73f28af9
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:82)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:586)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:643)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:877)
+	at com.training.utility.DriverFactory.getDriver(DriverFactory.java:37)
+	at com.training.sanity.tests.LoginTests.setUp(LoginTests.java:35)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Sample_test_Suite-class-skipped -->
+          <div class="suite-Sample_test_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.training.sanity.tests.ELTC_052_SessionCategories</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="validLoginTest">
+                  </a> <!-- validLoginTest -->
+                  <span class="method-name">validLoginTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -219,14 +331,14 @@
           <div class="suite-Sample_test_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.training.sanity.tests.ELTC_025_Delete_category_icon</span>
+              <span class="class-name">com.training.sanity.tests.ELTC_051_Userlist</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="createcourseTest">
-                  </a> <!-- createcourseTest -->
-                  <span class="method-name">createcourseTest</span>
+                  <a name="userlistTest">
+                  </a> <!-- userlistTest -->
+                  <span class="method-name">userlistTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -241,14 +353,51 @@
           <div class="suite-Sample_test_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.training.sanity.tests.ELTC_024_Courses_Categories</span>
+              <span class="class-name">com.training.sanity.tests.ELTC_054_Teachers</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="coursecategoriesTest">
-                  </a> <!-- coursecategoriesTest -->
-                  <span class="method-name">coursecategoriesTest</span>
+                  <a name="ReportingTest">
+                  </a> <!-- ReportingTest -->
+                  <span class="method-name">ReportingTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validLoginTest">
+                  </a> <!-- validLoginTest -->
+                  <span class="method-name">validLoginTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Sample_test_Suite-class-passed -->
+          <div class="suite-Sample_test_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.training.sanity.tests.ELTC_055_Careers</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="validLoginTest">
+                  </a> <!-- validLoginTest -->
+                  <span class="method-name">validLoginTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Sample_test_Suite-class-passed -->
+          <div class="suite-Sample_test_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.training.sanity.tests.ELTC_053_Reporting</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="ReportingTest">
+                  </a> <!-- ReportingTest -->
+                  <span class="method-name">ReportingTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -273,10 +422,11 @@
   &lt;test thread-count=&quot;5&quot; name=&quot;Sample test&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.training.sanity.tests.LoginTests&quot;/&gt;
-      &lt;class name=&quot;com.training.sanity.tests.ELTC_022_Create_Course_link&quot;/&gt;
-      &lt;class name=&quot;com.training.sanity.tests.ELTC_023_Add_users_course&quot;/&gt;
-      &lt;class name=&quot;com.training.sanity.tests.ELTC_024_Courses_Categories&quot;/&gt;
-      &lt;class name=&quot;com.training.sanity.tests.ELTC_025_Delete_category_icon&quot;/&gt;
+      &lt;class name=&quot;com.training.sanity.tests.ELTC_051_Userlist&quot;/&gt;
+      &lt;class name=&quot;com.training.sanity.tests.ELTC_052_SessionCategories&quot;/&gt;
+      &lt;class name=&quot;com.training.sanity.tests.ELTC_053_Reporting&quot;/&gt;
+      &lt;class name=&quot;com.training.sanity.tests.ELTC_054_Teachers&quot;/&gt;
+      &lt;class name=&quot;com.training.sanity.tests.ELTC_055_Careers&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Sample test --&gt;
 &lt;/suite&gt; &lt;!-- Sample test Suite --&gt;
@@ -290,7 +440,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Sample test (5 classes)</span>
+                <span class="test-name">Sample test (6 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -316,48 +466,56 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(9);
+data.addRows(11);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'coursecategoriesTest')
-data.setCell(0, 2, 'com.training.sanity.tests.ELTC_024_Courses_Categories')
-data.setCell(0, 3, 27288);
+data.setCell(0, 1, 'ReportingTest')
+data.setCell(0, 2, 'com.training.sanity.tests.ELTC_055_Careers')
+data.setCell(0, 3, 80365);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'createcourseTest')
-data.setCell(1, 2, 'com.training.sanity.tests.ELTC_022_Create_Course_link')
-data.setCell(1, 3, 26397);
+data.setCell(1, 1, 'SessionCategoriesTest')
+data.setCell(1, 2, 'com.training.sanity.tests.ELTC_052_SessionCategories')
+data.setCell(1, 3, 67134);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'validLoginTest')
-data.setCell(2, 2, 'com.training.sanity.tests.ELTC_024_Courses_Categories')
-data.setCell(2, 3, 21903);
+data.setCell(2, 1, 'ReportingTest')
+data.setCell(2, 2, 'com.training.sanity.tests.ELTC_054_Teachers')
+data.setCell(2, 3, 60387);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'AddcourseTest')
-data.setCell(3, 2, 'com.training.sanity.tests.ELTC_023_Add_users_course')
-data.setCell(3, 3, 19342);
+data.setCell(3, 1, 'ReportingTest')
+data.setCell(3, 2, 'com.training.sanity.tests.ELTC_053_Reporting')
+data.setCell(3, 3, 50476);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'validLoginTest')
-data.setCell(4, 2, 'com.training.sanity.tests.ELTC_022_Create_Course_link')
-data.setCell(4, 3, 17629);
+data.setCell(4, 1, 'userlistTest')
+data.setCell(4, 2, 'com.training.sanity.tests.ELTC_051_Userlist')
+data.setCell(4, 3, 26168);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'validLoginTest')
-data.setCell(5, 2, 'com.training.sanity.tests.ELTC_023_Add_users_course')
-data.setCell(5, 3, 17098);
+data.setCell(5, 2, 'com.training.sanity.tests.ELTC_055_Careers')
+data.setCell(5, 3, 18067);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'createcourseTest')
-data.setCell(6, 2, 'com.training.sanity.tests.ELTC_025_Delete_category_icon')
-data.setCell(6, 3, 14629);
+data.setCell(6, 1, 'validLoginTest')
+data.setCell(6, 2, 'com.training.sanity.tests.ELTC_051_Userlist')
+data.setCell(6, 3, 17081);
 data.setCell(7, 0, 7)
 data.setCell(7, 1, 'validLoginTest')
-data.setCell(7, 2, 'com.training.sanity.tests.ELTC_025_Delete_category_icon')
-data.setCell(7, 3, 10100);
+data.setCell(7, 2, 'com.training.sanity.tests.ELTC_052_SessionCategories')
+data.setCell(7, 3, 17007);
 data.setCell(8, 0, 8)
 data.setCell(8, 1, 'validLoginTest')
-data.setCell(8, 2, 'com.training.sanity.tests.LoginTests')
-data.setCell(8, 3, 5588);
+data.setCell(8, 2, 'com.training.sanity.tests.ELTC_054_Teachers')
+data.setCell(8, 3, 16419);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'validLoginTest')
+data.setCell(9, 2, 'com.training.sanity.tests.ELTC_053_Reporting')
+data.setCell(9, 3, 15998);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'validLoginTest')
+data.setCell(10, 2, 'com.training.sanity.tests.LoginTests')
+data.setCell(10, 3, 0);
 window.suiteTableData['Sample_test_Suite']= { tableData: data, tableDiv: 'times-div-Sample_test_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <span class="suite-total-time">Total running time: 6 minutes</span>
               <div id="times-div-Sample_test_Suite">
               </div> <!-- times-div-Sample_test_Suite -->
             </div> <!-- times-div -->
@@ -389,117 +547,147 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">setUp</span>
-                <span class="method-start">39 ms</span>
+                <span class="method-start">31 ms</span>
               </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">validLoginTest</span>
-                <span class="method-start">43882 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">49472 ms</span>
-              </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">com.training.sanity.tests.ELTC_022_Create_Course_link</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.training.sanity.tests.ELTC_051_Userlist</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUpBeforeClass</span>
-                <span class="method-start">51333 ms</span>
+                <span class="method-start">2803 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">validLoginTest</span>
-                <span class="method-start">94096 ms</span>
+                <span class="method-start">48605 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">com.training.sanity.tests.ELTC_023_Add_users_course</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.training.sanity.tests.ELTC_052_SessionCategories</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUpBeforeClass</span>
-                <span class="method-start">111728 ms</span>
+                <span class="method-start">65686 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">validLoginTest</span>
-                <span class="method-start">153587 ms</span>
+                <span class="method-start">108228 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">com.training.sanity.tests.ELTC_024_Courses_Categories</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.training.sanity.tests.ELTC_053_Reporting</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUpBeforeClass</span>
-                <span class="method-start">170687 ms</span>
+                <span class="method-start">125235 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">validLoginTest</span>
-                <span class="method-start">212156 ms</span>
+                <span class="method-start">166713 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">com.training.sanity.tests.ELTC_025_Delete_category_icon</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.training.sanity.tests.ELTC_054_Teachers</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUpBeforeClass</span>
-                <span class="method-start">234063 ms</span>
+                <span class="method-start">182711 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">validLoginTest</span>
-                <span class="method-start">275475 ms</span>
+                <span class="method-start">223721 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">com.training.sanity.tests.ELTC_022_Create_Course_link</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.training.sanity.tests.ELTC_055_Careers</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUpBeforeClass</span>
+                <span class="method-start">240140 ms</span>
+              </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">createcourseTest</span>
-                <span class="method-start">285577 ms</span>
+                <span class="method-name">validLoginTest</span>
+                <span class="method-start">281906 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">com.training.sanity.tests.ELTC_023_Add_users_course</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.training.sanity.tests.ELTC_051_Userlist</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">AddcourseTest</span>
-                <span class="method-start">311978 ms</span>
+                <span class="method-name">userlistTest</span>
+                <span class="method-start">299973 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">com.training.sanity.tests.ELTC_024_Courses_Categories</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.training.sanity.tests.ELTC_052_SessionCategories</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">coursecategoriesTest</span>
-                <span class="method-start">331327 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">SessionCategoriesTest</span>
+                <span class="method-start">326141 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">com.training.sanity.tests.ELTC_025_Delete_category_icon</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.training.sanity.tests.ELTC_053_Reporting</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">createcourseTest</span>
-                <span class="method-start">358623 ms</span>
+                <span class="method-name">ReportingTest</span>
+                <span class="method-start">393291 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">com.training.sanity.tests.ELTC_022_Create_Course_link</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.training.sanity.tests.ELTC_054_Teachers</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">ReportingTest</span>
+                <span class="method-start">443767 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.training.sanity.tests.ELTC_055_Careers</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">ReportingTest</span>
+                <span class="method-start">504154 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.training.sanity.tests.ELTC_051_Userlist</div> <!-- chronological-class-name -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">373254 ms</span>
+                <span class="method-start">584519 ms</span>
               </div> <!-- configuration-test after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">com.training.sanity.tests.ELTC_023_Add_users_course</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.training.sanity.tests.ELTC_052_SessionCategories</div> <!-- chronological-class-name -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">374495 ms</span>
+                <span class="method-start">587675 ms</span>
               </div> <!-- configuration-test after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">com.training.sanity.tests.ELTC_024_Courses_Categories</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.training.sanity.tests.ELTC_053_Reporting</div> <!-- chronological-class-name -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">375616 ms</span>
+                <span class="method-start">588856 ms</span>
               </div> <!-- configuration-test after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">com.training.sanity.tests.ELTC_025_Delete_category_icon</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.training.sanity.tests.ELTC_054_Teachers</div> <!-- chronological-class-name -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">376762 ms</span>
+                <span class="method-start">590026 ms</span>
               </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.training.sanity.tests.ELTC_055_Careers</div> <!-- chronological-class-name -->
+              <div class="configuration-test after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">591196 ms</span>
+              </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.training.sanity.tests.LoginTests</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">validLoginTest</span>
+                <span class="method-start">-1546020311988 ms</span>
+              </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

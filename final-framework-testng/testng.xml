@@ -5,10 +5,11 @@
    <test name = "Sample test">
       <classes>
          <class name = "com.training.sanity.tests.LoginTests" />
-         <class name = "com.training.sanity.tests.ELTC_022_Create_Course_link" />
-         <class name = "com.training.sanity.tests.ELTC_023_Add_users_course" />
-         <class name = "com.training.sanity.tests.ELTC_024_Courses_Categories" />
-         <class name = "com.training.sanity.tests.ELTC_025_Delete_category_icon" />
+         <class name = "com.training.sanity.tests.ELTC_051_Userlist" />
+         <class name = "com.training.sanity.tests.ELTC_052_SessionCategories" />
+         <class name = "com.training.sanity.tests.ELTC_053_Reporting" />
+         <class name = "com.training.sanity.tests.ELTC_054_Teachers" />
+         <class name = "com.training.sanity.tests.ELTC_055_Careers" />
       </classes>
    </test>
 </suite>	
