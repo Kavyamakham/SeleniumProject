@@ -1,3 +1,4 @@
+//To verify whether application allows admin to create training session based on the created sessions categories list
 package com.training.pom;
 
 import org.openqa.selenium.WebDriver;

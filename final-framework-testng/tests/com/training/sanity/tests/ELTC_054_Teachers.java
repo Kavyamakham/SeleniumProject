@@ -1,3 +1,4 @@
+//TO verify whether application allows admin to generate report based on the student
 package com.training.sanity.tests;
 
 import java.io.FileInputStream;
@@ -22,6 +23,7 @@ public class ELTC_054_Teachers {
 	private static Properties properties;
 	private ScreenShot screenShot;
 	private TeachersPOM TeacherPOM;
+	private String Wait;
 
 	@BeforeClass
 	public void setUpBeforeClass() throws IOException, InterruptedException 
@@ -29,7 +31,6 @@ public class ELTC_054_Teachers {
 		properties = new Properties();
 		FileInputStream inStream = new FileInputStream("./resources/others.properties");
 		properties.load(inStream);
-
 		driver = DriverFactory.getDriver(DriverNames.CHROME);
 		loginPOM = new LoginPOM(driver); 
 		baseUrl = properties.getProperty("baseURL");
@@ -45,42 +46,37 @@ public class ELTC_054_Teachers {
 		driver.close();
 	}
 	@Test (priority=1)
-	public void validLoginTest() throws InterruptedException 
+	public void validLoginTest() 
 	{
 		loginPOM.sendUserName("admin");
 		loginPOM.sendPassword("admin@123");
-		Thread.sleep(5000);
 		screenShot.captureScreenShot("24");
-		loginPOM.clickLoginBtn(); 
-		Thread.sleep(5000);
+		loginPOM.clickLoginBtn(); 	
 		screenShot.captureScreenShot("25");
 	}
 
 	@Test (priority=2)
-	public void ReportingTest() throws InterruptedException 
+	public void ReportingTest() 
 	{
-		TeachersPOM TeacherPOM = new  TeachersPOM(driver);	//object created for TeacherPOM
+		//Create object for TeacherPOM
+		TeachersPOM TeacherPOM = new  TeachersPOM(driver);	
 		TeacherPOM.ClickReportingtab();
+		Wait = properties.getProperty("implicitWait");
 		TeacherPOM.Clickteacherlink();
-		Thread.sleep(5000);
 		screenShot.captureScreenShot("26");
 		TeacherPOM.sendKeyword("emily");//keyword name is Entered in text box
 		TeacherPOM.Clicksearchbutton();	
-		TeacherPOM.Clickarrowlink();
-		Thread.sleep(5000);
 		screenShot.captureScreenShot("27");
-		TeacherPOM.Clickcourselink();
-		Thread.sleep(5000);
+		TeacherPOM.Clickarrowlink();
 		screenShot.captureScreenShot("28");
-		TeacherPOM.Clickquizicon(); 
-		Thread.sleep(5000);
+		TeacherPOM.Clickcourselink();
 		screenShot.captureScreenShot("29");
-		TeacherPOM.ClickEmail();
-		TeacherPOM.ClickCorrecttest();
-		Thread.sleep(5000);
+		TeacherPOM.Clickquizicon(); 	
 		screenShot.captureScreenShot("30");
-		TeacherPOM.ClickCourseName();
-		Thread.sleep(5000);
+		TeacherPOM.ClickEmail();
+		TeacherPOM.ClickCorrecttest();	
 		screenShot.captureScreenShot("31");
+		TeacherPOM.ClickCourseName();	
+		screenShot.captureScreenShot("32");
 	}
 }

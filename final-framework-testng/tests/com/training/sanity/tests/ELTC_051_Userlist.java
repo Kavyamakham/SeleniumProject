@@ -1,9 +1,10 @@
+//TO verify whether application allows admin to modify details of user
+
 package com.training.sanity.tests;
 
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
-
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
@@ -16,12 +17,15 @@ import com.training.utility.DriverFactory;
 import com.training.utility.DriverNames;
 
 public class ELTC_051_Userlist {
+
 	private WebDriver driver;
 	private String baseUrl;
 	private LoginPOM loginPOM;
 	private static Properties properties;
 	private ScreenShot screenShot;
 	private UserlistPOM userlistPOM;
+	private String Wait;
+
 
 	@BeforeClass
 	public void setUpBeforeClass() throws IOException, InterruptedException 
@@ -29,11 +33,12 @@ public class ELTC_051_Userlist {
 		properties = new Properties();
 		FileInputStream inStream = new FileInputStream("./resources/others.properties");
 		properties.load(inStream);
-       
+
 		driver = DriverFactory.getDriver(DriverNames.CHROME);
 		loginPOM = new LoginPOM(driver); 
 		baseUrl = properties.getProperty("baseURL"); 
 		screenShot = new ScreenShot(driver); 
+		Wait = properties.getProperty("implicitWait");
 		// open the browser 
 		driver.get(baseUrl);
 		Thread.sleep(5000);
@@ -46,35 +51,38 @@ public class ELTC_051_Userlist {
 		driver.close(); //closes the chrome driver
 	}
 	@Test (priority=1)
-	public void validLoginTest() throws InterruptedException 
+	public void validLoginTest() 
 	{
 		loginPOM.sendUserName("admin");
-		loginPOM.sendPassword("admin@123");//
-		Thread.sleep(5000);
+		loginPOM.sendPassword("admin@123");
 		screenShot.captureScreenShot("1");
 		loginPOM.clickLoginBtn();
-		Thread.sleep(5000);
 		screenShot.captureScreenShot("2");
 	}
 
 	@Test (priority=2)
-	public void userlistTest() throws InterruptedException 
+	public void userlistTest()
 	{
-		UserlistPOM userlistPOM = new  UserlistPOM(driver);	//object created for the class UserlistPOM
+		//Create object for UserlistPOM
+		UserlistPOM userlistPOM = new  UserlistPOM(driver);	
 		userlistPOM.clickuserlist();
-		userlistPOM.search("sunil"); //Enter the user name in search box as sunil
+		Wait = properties.getProperty("implicitWait");
+		//give the user name in search box	
+		userlistPOM.search("sunil"); 
+		//perform clicking on search button
 		userlistPOM.clicksearchbutton(); 
-		Thread.sleep(5000);
 		screenShot.captureScreenShot("3");
+		//Click on Edit ICon button
 		userlistPOM.clickEditIcon();
 		screenShot.captureScreenShot("4");
-		userlistPOM.SendEmailid("sunil@gmail.com"); //Enter the Email id
-		userlistPOM.ClickAccount(); 
-		Thread.sleep(5000);
-		screenShot.captureScreenShot("5");
+		//clearing and Give the Email id  
+		userlistPOM.SendEmailid("sunil@gmail.com"); 
+		//perform clicking on inactive
+		userlistPOM.ClickAccount(); 	
+		screenShot.captureScreenShot("5");	
+		//perform click on save
 		userlistPOM.Clicksave();
-		Thread.sleep(5000);
 		screenShot.captureScreenShot("6");
-		
+
 	}
 }

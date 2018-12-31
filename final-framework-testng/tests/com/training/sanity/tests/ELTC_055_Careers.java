@@ -1,3 +1,4 @@
+//To verify whether application allows admin to create career, promotion & subscribe session to promotion
 package com.training.sanity.tests;
 
 import java.io.FileInputStream;
@@ -23,6 +24,7 @@ public class ELTC_055_Careers {
 	private static Properties properties;
 	private ScreenShot screenShot;
 	private CareersPromotPOM CareersPOM;
+	private String Wait;
 
 	@BeforeClass
 	public void setUpBeforeClass() throws IOException, InterruptedException 
@@ -30,7 +32,6 @@ public class ELTC_055_Careers {
 		properties = new Properties();
 		FileInputStream inStream = new FileInputStream("./resources/others.properties");
 		properties.load(inStream);
-
 		driver = DriverFactory.getDriver(DriverNames.CHROME);
 		loginPOM = new LoginPOM(driver); 
 		baseUrl = properties.getProperty("baseURL");
@@ -47,49 +48,41 @@ public class ELTC_055_Careers {
 		driver.close();
 	}
 	@Test (priority=1)
-	public void validLoginTest() throws InterruptedException 
+	public void validLoginTest()
 	{
 		loginPOM.sendUserName("admin");
 		loginPOM.sendPassword("admin@123");
-		Thread.sleep(5000);
-		screenShot.captureScreenShot("32");
-		loginPOM.clickLoginBtn(); 
-		Thread.sleep(5000);
 		screenShot.captureScreenShot("33");
+		loginPOM.clickLoginBtn(); 		
+		screenShot.captureScreenShot("34");
 	}
 
 	@Test (priority=2)
-	public void ReportingTest() throws InterruptedException 
+	public void ReportingTest()  
 	{
-		CareersPromotPOM CareersPOM = new  CareersPromotPOM(driver);	//object created for CareersPromotPOM
-		CareersPOM.clickcareersandpromotion();
-		Thread.sleep(5000);
-		screenShot.captureScreenShot("34");
-		CareersPOM.clickcareers();
-		Thread.sleep(5000);
+		//Create object for CareersPromotPOM
+		CareersPromotPOM CareersPOM = new  CareersPromotPOM(driver);	
+		CareersPOM.clickcareersandpromotion();	
+		Wait = properties.getProperty("implicitWait");
 		screenShot.captureScreenShot("35");
-		CareersPOM.clickAdd();
-		Thread.sleep(5000);
+		CareersPOM.clickcareers();		
 		screenShot.captureScreenShot("36");
+		CareersPOM.clickAdd();
+		screenShot.captureScreenShot("37");
 		CareersPOM.Name("QA");//send the text box
-		CareersPOM.clickAddcareers();
-		Thread.sleep(5000);
-		screenShot.captureScreenShot("37");		
-		CareersPOM.ClickCareersandpromotions();
-		Thread.sleep(5000);
-		screenShot.captureScreenShot("38");
+		CareersPOM.clickAddcareers();	
+		screenShot.captureScreenShot("38");		
+		CareersPOM.ClickCareersandpromotions();	
+		screenShot.captureScreenShot("39");
 		CareersPOM.Clickpromotion();
 		CareersPOM.ClickAddIcon();
-		CareersPOM.SendPromotionName("QA for Tester");//Send to PromotionName
-		Thread.sleep(5000);
-		CareersPOM.ClickPromotionSubmit();
-		Thread.sleep(5000);
-		screenShot.captureScreenShot("39");
+		CareersPOM.SendPromotionName("QA for Tester2");//Send to PromotionName
+		CareersPOM.ClickPromotionSubmit();		
+		screenShot.captureScreenShot("40");
 		CareersPOM.clicksubscriber();
 		CareersPOM.selectSession();
 		CareersPOM.arrow();
 		CareersPOM.ClickSessionbutton();
-		Thread.sleep(5000);
-		screenShot.captureScreenShot("40");
+		screenShot.captureScreenShot("41");
 	}
 }

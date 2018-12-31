@@ -1,3 +1,5 @@
+////TO verify whether application allows admin to modify details of user
+
 package com.training.pom;
 
 import org.openqa.selenium.By;
@@ -27,7 +29,7 @@ public class UserlistPOM {
 	private WebElement searchbutton;
 
    //click on Edit icon of the sunil user
-	@FindBy(xpath="//*[contains(@href,'edit.php?user_id=20')]")
+	@FindBy(xpath="//*[contains(@href,'edit.php?user_id=20')]") 
 	private WebElement EditIcon;
 
 	//Clear e-Mail box and enter the email id 

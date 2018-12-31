@@ -1,4 +1,7 @@
+// TO verify whether application allows admin to generate report based on the student
+
 package com.training.sanity.tests;
+
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -26,6 +29,7 @@ public class ELTC_053_Reporting {
 	private static Properties properties;
 	private ScreenShot screenShot;
 	private ReportingPOM ReportPOM;
+	private String Wait;
 
 	@BeforeClass
 	public void setUpBeforeClass() throws IOException, InterruptedException 
@@ -36,7 +40,6 @@ public class ELTC_053_Reporting {
 		driver = DriverFactory.getDriver(DriverNames.CHROME);
 		loginPOM = new LoginPOM(driver); 
 		baseUrl = properties.getProperty("baseURL");
-
 		screenShot = new ScreenShot(driver); 
 		// open the browser 
 		driver.get(baseUrl);
@@ -49,44 +52,39 @@ public class ELTC_053_Reporting {
 		driver.close();
 	}
 	@Test (priority=1)
-	public void validLoginTest() throws InterruptedException 
+	public void validLoginTest()
 	{
 		loginPOM.sendUserName("admin");
 		loginPOM.sendPassword("admin@123");
-		Thread.sleep(5000);
 		screenShot.captureScreenShot("15");
-		loginPOM.clickLoginBtn(); 
-		Thread.sleep(5000);
+		loginPOM.clickLoginBtn(); 	
 		screenShot.captureScreenShot("16");
 	}
 
 	@Test (priority=2)
-	public void ReportingTest() throws InterruptedException 
+	public void ReportingTest()
 	{
-		ReportingPOM ReportPOM = new  ReportingPOM(driver);	//object created for ReportingPOM
+		//Create object for ReportingPOM
+		ReportingPOM ReportPOM = new  ReportingPOM(driver);	
 		ReportPOM.clickReporting();
+		Wait = properties.getProperty("implicitWait");
 		ReportPOM.clickFollowedStudents();
-		Thread.sleep(5000);
 		screenShot.captureScreenShot("17");	
 		ReportPOM.keyword("sunil");//Enter student name in keyword
 		ReportPOM.optionbutton();
-		ReportPOM.clicksearchbutton();		
-		ReportPOM.ClickArrow(); 
-		Thread.sleep(5000);
+		ReportPOM.clicksearchbutton();	
 		screenShot.captureScreenShot("18");
+		ReportPOM.ClickArrow(); 	
+		screenShot.captureScreenShot("19");
 		ReportPOM.Clickcoursearrow();
-		Thread.sleep(5000);
-		screenShot.captureScreenShot("19");	
+		screenShot.captureScreenShot("20");	
 		ReportPOM.Clickquizicon();
-		Thread.sleep(5000);
-		screenShot.captureScreenShot("20");
+		screenShot.captureScreenShot("21");
 		ReportPOM.Clicknotification();
 		ReportPOM.Clickcorrecttest();
-		Thread.sleep(5000);
-		screenShot.captureScreenShot("21");
-        ReportPOM.ClickCourseName();
-        Thread.sleep(5000);
 		screenShot.captureScreenShot("22");
+		ReportPOM.ClickCourseName();    
+		screenShot.captureScreenShot("23");
 
 	}
 }

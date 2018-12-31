@@ -1,3 +1,4 @@
+//To verify whether application allows admin to create training session based on the created sessions categories list
 package com.training.sanity.tests;
 
 import java.io.FileInputStream;
@@ -23,6 +24,7 @@ public class ELTC_052_SessionCategories
 	private static Properties properties;
 	private ScreenShot screenShot;
 	private SessionscategoriesPOM SessionCatePOM;
+	private String Wait;
 
 	@BeforeClass
 	public void setUpBeforeClass() throws IOException, InterruptedException 
@@ -47,50 +49,43 @@ public class ELTC_052_SessionCategories
 		driver.close();
 	}
 	@Test (priority=1)
-	public void validLoginTest() throws InterruptedException 
+	public void validLoginTest()  
 	{
 		loginPOM.sendUserName("admin");
 		loginPOM.sendPassword("admin@123");
-		Thread.sleep(5000);
 		screenShot.captureScreenShot("7");
 		loginPOM.clickLoginBtn(); 
-		Thread.sleep(5000);
 		screenShot.captureScreenShot("8");
 	}
 
 	@Test (priority=2)
-	public void SessionCategoriesTest() throws InterruptedException 
+	public void SessionCategoriesTest() 
 	{
-		SessionscategoriesPOM SessionCatePOM = new  SessionscategoriesPOM(driver);	//Object created for SessionscategoriesPOM
+		//Create object for SessionscategoriesPOM
+		SessionscategoriesPOM SessionCatePOM = new  SessionscategoriesPOM(driver);	
 		SessionCatePOM.clickSessioncategories();
-		Thread.sleep(5000);
+		Wait = properties.getProperty("implicitWait");		
 		screenShot.captureScreenShot("9");
-		SessionCatePOM.clickAddcategory();
-		Thread.sleep(5000);
+		SessionCatePOM.clickAddcategory();		
 		screenShot.captureScreenShot("10");
 		SessionCatePOM.category("Testing");//Category name is Entered text box
 		SessionCatePOM.clickAddtoCategory();
-		Thread.sleep(5000);
 		screenShot.captureScreenShot("11");
 		SessionCatePOM.clicktrainingSession(); 
 		SessionCatePOM.clickAddtrainingSession();
-		SessionCatePOM.Sessionname("selenium training session");// Session name entered in text box
+		SessionCatePOM.Sessionname("selenium training session2");// Session name entered in text box
 		SessionCatePOM.clickAdvanceSetting();
-		Thread.sleep(5000);
 		screenShot.captureScreenShot("12");
 		SessionCatePOM.ClickSession();
 		SessionCatePOM.ClickNextStep();
 		SessionCatePOM.clicktesting();
-		Thread.sleep(5000);
 		screenShot.captureScreenShot("13");
 		SessionCatePOM.clickbutton();
 		SessionCatePOM.clickNextbutton();
 		SessionCatePOM.portal("sunil");//student name is Entered in Portal users list
 		SessionCatePOM.clickstudentlink();
-		Thread.sleep(5000);
 		screenShot.captureScreenShot("14");
 		SessionCatePOM.clickFinishcreation();
-		Thread.sleep(5000);
 		screenShot.captureScreenShot("15");
 	}
 }

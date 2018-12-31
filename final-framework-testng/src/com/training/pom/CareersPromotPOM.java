@@ -1,3 +1,4 @@
+//To verify whether application allows admin to create career, promotion & subscribe session to promotion
 package com.training.pom;
 
 import org.openqa.selenium.WebDriver;
@@ -55,7 +56,7 @@ public class CareersPromotPOM
 	private WebElement PromotionSubmit;
 	
 	//Click on subscribe sessions to promotion icon
-	@FindBy(xpath="//*[@id=\"6\"]/td[4]/a[1]")
+	@FindBy(xpath="//*[@id=\"29\"]/td[4]/a[1]")
 	private WebElement clicksubscriber;
 	
 	//Select session in Sessions not subscribed
