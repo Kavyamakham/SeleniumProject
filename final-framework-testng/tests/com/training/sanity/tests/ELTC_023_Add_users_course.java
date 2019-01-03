@@ -61,12 +61,16 @@ public class ELTC_023_Add_users_course {
 	@Test(priority =2)
 	public void AddcourseTest() throws InterruptedException 
 	{
+		//Create object for AddCoursePOM
 		AddCoursePOM addcoursePOM = new AddCoursePOM(driver);
 		addcoursePOM.clickAddcourse();
 		Thread.sleep(5000);
 		screenShot.captureScreenShot("14");
+		//Click on user list 
 		addcoursePOM.userlist();
+		//click on course list
 		addcoursePOM.courselist();
+		//click on add to course
 		addcoursePOM.addtocourse();
 		Thread.sleep(5000);
 		screenShot.captureScreenShot("15");		

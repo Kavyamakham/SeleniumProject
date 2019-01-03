@@ -38,13 +38,12 @@ public class ELTC_055_Careers {
 		screenShot = new ScreenShot(driver); 
 		// open the browser 
 		driver.get(baseUrl);
-		Thread.sleep(5000);
+		Wait = properties.getProperty("implicitWait");	
 	}
 
 	@AfterTest
-	public void tearDown() throws Exception 
-	{
-		Thread.sleep(1000);
+	public void tearDown() 
+	{		
 		driver.close();
 	}
 	@Test (priority=1)
@@ -76,7 +75,7 @@ public class ELTC_055_Careers {
 		screenShot.captureScreenShot("39");
 		CareersPOM.Clickpromotion();
 		CareersPOM.ClickAddIcon();
-		CareersPOM.SendPromotionName("QA for Tester2");//Send to PromotionName
+		CareersPOM.SendPromotionName("QA for Tester");//Send to PromotionName
 		CareersPOM.ClickPromotionSubmit();		
 		screenShot.captureScreenShot("40");
 		CareersPOM.clicksubscriber();

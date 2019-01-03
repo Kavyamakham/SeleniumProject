@@ -1,4 +1,4 @@
-// TO verify whether application allows admin to generate report based on the student
+// TO verify whether application allows admin to generate report based on the teacher
 
 package com.training.sanity.tests;
 
@@ -43,12 +43,11 @@ public class ELTC_053_Reporting {
 		screenShot = new ScreenShot(driver); 
 		// open the browser 
 		driver.get(baseUrl);
-		Thread.sleep(5000);
+		Wait = properties.getProperty("implicitWait");
 	}
 	@AfterTest
 	public void tearDown() throws Exception 
 	{
-		Thread.sleep(1000);
 		driver.close();
 	}
 	@Test (priority=1)
@@ -70,20 +69,27 @@ public class ELTC_053_Reporting {
 		Wait = properties.getProperty("implicitWait");
 		ReportPOM.clickFollowedStudents();
 		screenShot.captureScreenShot("17");	
-		ReportPOM.keyword("sunil");//Enter student name in keyword
-		ReportPOM.optionbutton();
+		//Enter student name in keyword	
+		ReportPOM.keyword("Kritika");
+		//Click on search button	
 		ReportPOM.clicksearchbutton();	
 		screenShot.captureScreenShot("18");
+		//Click on >> icon of the student name
 		ReportPOM.ClickArrow(); 	
 		screenShot.captureScreenShot("19");
+		//Click on course >> icon
 		ReportPOM.Clickcoursearrow();
 		screenShot.captureScreenShot("20");	
-		ReportPOM.Clickquizicon();
+		// Click on quiz icon
+		ReportPOM.Clickquizicon(); 
 		screenShot.captureScreenShot("21");
-		ReportPOM.Clicknotification();
-		ReportPOM.Clickcorrecttest();
+		//Click on send email
+		ReportPOM.Clicknotification(); 
+		// Click on correct test
+		ReportPOM.Clickcorrecttest(); 
 		screenShot.captureScreenShot("22");
-		ReportPOM.ClickCourseName();    
+		//Click on course link 
+		ReportPOM.ClickCourseName();   
 		screenShot.captureScreenShot("23");
 
 	}

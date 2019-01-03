@@ -60,14 +60,18 @@ public class ELTC_022_Create_Course_link
 	@Test (priority=2)
 	public void createcourseTest() throws InterruptedException 
 	{
+		//Create object for CreateCoursePOM
 		CreateCoursePOM createcoursePOM = new CreateCoursePOM(driver);
 		createcoursePOM.clickcreatecourse();
 		Thread.sleep(5000);
 		screenShot.captureScreenShot("9");
+		//Enter  the title value
 		createcoursePOM.sendTitle("testing");
+		//Enter the code value
 		createcoursePOM.sendCode("tes");
 		createcoursePOM.clickbutton();
 		createcoursePOM.clickbutton1();
+		//Select Category
 		createcoursePOM.selectcategory();
 		createcoursePOM.selectlanguage();
 		Thread.sleep(5000);

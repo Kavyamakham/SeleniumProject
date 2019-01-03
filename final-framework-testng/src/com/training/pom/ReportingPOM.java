@@ -17,48 +17,44 @@ public class ReportingPOM
 	}
 	//click on Reporting tab
 	@FindBy(xpath="//*[@id=\"menuone\"]/ul[1]/li[4]/a")
-    private WebElement Reporting;
-	
+	private WebElement Reporting;
+
 	//click on Followed students link
 	@FindBy(xpath="//*[@id=\"content-section\"]/div/div[3]/table/tbody/tr[1]/td[1]/a")
 	private WebElement FollowedStudents;
-	
+
 	//Enter student name in keyword textbox
 	@FindBy(name="keyword")
 	private WebElement keyword;
-	
-	//Click on inactive button
-	@FindBy(xpath="//*[@id=\"search_user_active\"]/option[2]") 
-	private WebElement option;
-	
+
 	//click on search button
 	@FindBy(id="search_user_submit")
 	private WebElement search;
-	
+
 	//click on >> icon of the student
-	@FindBy(xpath="//*[contains(@href,'myStudents.php?student=20')]")
+	@FindBy(xpath="//*[contains(@href,'myStudents.php?student=52')]")
 	private WebElement Arrow;
-	
+
 	//click on >> icon of the course
 	@FindBy(xpath="//*[@id=\"content-section\"]/div/div[4]/table/tbody/tr/td[7]/a")
 	private WebElement coursearrow;
-	
+
 	//click on quiz icon of the test section
 	@FindBy(xpath="//*[@id=\"content-section\"]/div/div[4]/table/tbody/tr[1]/td[5]/a")
 	private WebElement quizicon;
-	
+
 	//Click on Send Email checkbox
 	@FindBy(name="send_notification")
 	private WebElement Notification;
-	
+
 	//click on correct test button
 	@FindBy(id="myform_submit")
 	private WebElement correcttest;
-	
+
 	//Click on Course Name link
 	@FindBy(xpath="//*[@id=\"page-breadcrumb\"]/ul/li[1]/a")
 	private WebElement CourseName;
-	
+
 	//Method for clicking on Reporting tab
 	public void clickReporting()
 	{
@@ -73,11 +69,6 @@ public class ReportingPOM
 	public void keyword(String name)
 	{
 		this.keyword.sendKeys(name);
-	}
-	//method for Clicking on inactive button
-	public void optionbutton()
-	{
-		this.option.click();
 	}
 	//Method for clicking on search button
 	public void clicksearchbutton()
@@ -114,5 +105,5 @@ public class ReportingPOM
 	{
 		this.CourseName.click();
 	}
-	
+
 }

@@ -1,4 +1,4 @@
-//TO verify whether application allows admin to generate report based on the student
+//TO verify whether application allows admin to generate report based on the teachers
 package com.training.pom;
 
 import org.openqa.selenium.WebDriver;
@@ -31,15 +31,15 @@ public class TeachersPOM
 	private WebElement search;
     
 	//click on >> icon of the Manzoor
-	@FindBy(xpath="//*[contains(@href,'myStudents.php?student=6')]")
+	@FindBy(xpath="//*[contains(@href,'myStudents.php?student=37')]")
 	private WebElement arrowlink;
 	
 	//Click on >> icon of the course
-	@FindBy(xpath="//*[@id=\"content-section\"]/div/div[4]/table/tbody/tr[1]/td[7]/a")
+	@FindBy(xpath="//*[@id=\"content-section\"]/div/div[4]/table/tbody/tr[2]/td[7]/a")
 	private WebElement courselink;
 	
 	//click on quiz icon of the test section
-	@FindBy(xpath="//*[@id=\"content-section\"]/div/div[4]/table/tbody/tr[2]/td[5]/a")
+	@FindBy(xpath="//*[@id=\"content-section\"]/div/div[4]/table/tbody/tr/td[5]/a")
 	private WebElement quizicon;
     
 	//Click on Send Email checkbox

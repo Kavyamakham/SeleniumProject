@@ -15,15 +15,15 @@ public class SessionscategoriesPOM
 		this.driver = driver; 
 		PageFactory.initElements(driver, this);
 	}
-    
+
 	//Click on sessions categories list
 	@FindBy(xpath="//*[@id=\"tabs-4\"]/div/div[2]/div[2]/ul/li[3]/a")
 	private WebElement Sessioncategories;
-    
+
 	//Click on Add category icon
 	@FindBy(xpath="//*[@id=\"content-section\"]/div/div[2]/div/div[1]/a[1]")
 	private WebElement Addcategory;
-    
+
 	//Enter credential in Category name text box
 	@FindBy(name="name")
 	private WebElement Category;
@@ -35,7 +35,7 @@ public class SessionscategoriesPOM
 	//Click on  Training Session List link
 	@FindBy(xpath="//*[@id=\"content-section\"]/div/div[3]/div/div[1]/a[2]")
 	private WebElement trainingSession;
-    
+
 	//Click on Add a training session icon
 	@FindBy(xpath="//*[@id=\"content-section\"]/div/div[2]/a[1]")
 	private WebElement AddtrainingSession;
@@ -49,37 +49,37 @@ public class SessionscategoriesPOM
 	private WebElement AdvanceSetting;
 
 	//Select created in sessions category list box
-	@FindBy(xpath="//*[@id=\"advanced_params_options\"]/div[1]/div[1]/div/button/span[1]")
+	@FindBy(xpath="//*[@id=\"session_category\"]/option[9]")
 	private WebElement Session;
-	
+
 	//Click on Next step button
 	@FindBy(xpath="//*[@id=\"add_session_submit\"]")
 	private WebElement NextStep;
-	
+
 	//Select course in course list window
 	@FindBy(xpath="//*[@id=\"origin\"]/option[3]")
 	private WebElement testing;
-	
+
 	//Click on > button
 	@FindBy(xpath="//*[@id=\"multiple-add-session\"]/div[2]/div[2]/div[1]/button")
 	private WebElement button;
-	
+
 	//Click on Next step button
 	@FindBy(xpath="//*[@id=\"multiple-add-session\"]/div[2]/div[2]/div[4]/button")
 	private WebElement Nextbutton;
-	
+
 	//Enter student name in Portal users list
 	@FindBy(id="user_to_add")
 	private WebElement portal;
-	
+
 	//click on the student name link
 	@FindBy(xpath="//*[@id=\"ajax_list_users_single\"]/a")
 	private WebElement studentlink;
-	
+
 	//click on Finish session creation button
 	@FindBy(xpath="//*[@id=\"multiple-add-session\"]/div[2]/div/button")
 	private WebElement Finishcreation;
-	
+
 	//Method for Clicking on sessions categories list
 	public void clickSessioncategories()
 	{
@@ -118,7 +118,7 @@ public class SessionscategoriesPOM
 	//Method for Clicking on advanced settings button
 	public void clickAdvanceSetting() 
 	{
-        this.AdvanceSetting.click();
+		this.AdvanceSetting.click();
 	}
 	//Method for Select created in sessions category list box
 	public void ClickSession()

@@ -30,7 +30,6 @@ public class ELTC_021_Courselist {
 		properties = new Properties();
 		FileInputStream inStream = new FileInputStream("./resources/others.properties");
 		properties.load(inStream);
-
 		driver = DriverFactory.getDriver(DriverNames.CHROME);
 		loginPOM = new LoginPOM(driver); 
 		baseUrl = properties.getProperty("baseURL");
@@ -60,15 +59,18 @@ public class ELTC_021_Courselist {
 	@Test (priority=2)
 	public void courselistTest() throws InterruptedException 
 	{
+		//Create object for CourselistPOM
 		CourselistPOM courselistPOM = new  CourselistPOM(driver);
 		courselistPOM.clickcourselist();
 		Thread.sleep(5000);
 		screenShot.captureScreenShot("3");
+		//click on select all
 		courselistPOM.clickselectall();
 		Thread.sleep(5000);
 		screenShot.captureScreenShot("4");
-		//compare values
+		//Click on details
 		courselistPOM.clickdetails();
+		//click on delete
 		courselistPOM.clickdelete();
 		Thread.sleep(5000);
 		screenShot.captureScreenShot("5");

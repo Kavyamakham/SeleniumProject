@@ -32,20 +32,19 @@ public class ELTC_052_SessionCategories
 		properties = new Properties();
 		FileInputStream inStream = new FileInputStream("./resources/others.properties");
 		properties.load(inStream);
-
 		driver = DriverFactory.getDriver(DriverNames.CHROME);
 		loginPOM = new LoginPOM(driver); 
 		baseUrl = properties.getProperty("baseURL");
 		screenShot = new ScreenShot(driver); 
 		// open the browser 
 		driver.get(baseUrl);
-		Thread.sleep(5000);
+		Wait = properties.getProperty("implicitWait");	
+
 	}
 
 	@AfterTest
-	public void tearDown() throws Exception 
+	public void tearDown() 
 	{
-		Thread.sleep(1000);
 		driver.close();
 	}
 	@Test (priority=1)
@@ -68,12 +67,14 @@ public class ELTC_052_SessionCategories
 		screenShot.captureScreenShot("9");
 		SessionCatePOM.clickAddcategory();		
 		screenShot.captureScreenShot("10");
-		SessionCatePOM.category("Testing");//Category name is Entered text box
+		//Category name is Entered text box
+		SessionCatePOM.category("Testing");
 		SessionCatePOM.clickAddtoCategory();
 		screenShot.captureScreenShot("11");
 		SessionCatePOM.clicktrainingSession(); 
 		SessionCatePOM.clickAddtrainingSession();
-		SessionCatePOM.Sessionname("selenium training session2");// Session name entered in text box
+		// Session name entered in text box
+		SessionCatePOM.Sessionname("selenium training session02");
 		SessionCatePOM.clickAdvanceSetting();
 		screenShot.captureScreenShot("12");
 		SessionCatePOM.ClickSession();
@@ -82,7 +83,8 @@ public class ELTC_052_SessionCategories
 		screenShot.captureScreenShot("13");
 		SessionCatePOM.clickbutton();
 		SessionCatePOM.clickNextbutton();
-		SessionCatePOM.portal("sunil");//student name is Entered in Portal users list
+		//student name is Entered in Portal users lists
+		SessionCatePOM.portal("sunil");
 		SessionCatePOM.clickstudentlink();
 		screenShot.captureScreenShot("14");
 		SessionCatePOM.clickFinishcreation();

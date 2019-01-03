@@ -59,10 +59,12 @@ public class ELTC_025_Delete_category_icon {
 	@Test (priority=2)
 	public void createcourseTest() throws InterruptedException 
 	{
+		//Create object for DelecteIconPOM
 		DeleteIconPOM  deleteiconPOM= new DeleteIconPOM(driver);
 		deleteiconPOM.clickcoursecategories();
 		Thread.sleep(5000);
 		screenShot.captureScreenShot("22");
+		//click on delete icon
 		deleteiconPOM.clickdeleteIcon();
 		Thread.sleep(5000);
 		screenShot.captureScreenShot("23");

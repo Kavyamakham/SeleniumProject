@@ -41,13 +41,13 @@ public class ELTC_051_Userlist {
 		Wait = properties.getProperty("implicitWait");
 		// open the browser 
 		driver.get(baseUrl);
-		Thread.sleep(5000);
+		Wait = properties.getProperty("implicitWait");
+		
 	}
 
 	@AfterTest
 	public void tearDown() throws Exception 
 	{
-		Thread.sleep(1000);
 		driver.close(); //closes the chrome driver
 	}
 	@Test (priority=1)

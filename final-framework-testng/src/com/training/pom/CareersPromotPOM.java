@@ -56,7 +56,7 @@ public class CareersPromotPOM
 	private WebElement PromotionSubmit;
 	
 	//Click on subscribe sessions to promotion icon
-	@FindBy(xpath="//*[@id=\"29\"]/td[4]/a[1]")
+	@FindBy(xpath="//*[@id=\"43\"]/td[4]/a[1]")
 	private WebElement clicksubscriber;
 	
 	//Select session in Sessions not subscribed

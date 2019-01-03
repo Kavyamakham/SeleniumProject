@@ -1,23 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Sample test Suite]">
-  <test thread-count="5" name="Sample test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.training.sanity.tests.ELTC_052_SessionCategories">
-        <methods>
-          <include name="tearDown"/>
-          <include name="SessionCategoriesTest"/>
-          <include name="setUpBeforeClass"/>
-        </methods>
-      </class> <!-- com.training.sanity.tests.ELTC_052_SessionCategories -->
-      <class name="com.training.sanity.tests.LoginTests">
-        <methods>
-          <include name="setUpBeforeClass"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="validLoginTest"/>
-        </methods>
-      </class> <!-- com.training.sanity.tests.LoginTests -->
       <class name="com.training.sanity.tests.ELTC_055_Careers">
         <methods>
           <include name="tearDown"/>
@@ -26,5 +11,5 @@
         </methods>
       </class> <!-- com.training.sanity.tests.ELTC_055_Careers -->
     </classes>
-  </test> <!-- Sample test(failed) -->
-</suite> <!-- Failed suite [Sample test Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

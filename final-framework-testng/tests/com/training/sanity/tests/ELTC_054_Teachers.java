@@ -1,6 +1,9 @@
-//TO verify whether application allows admin to generate report based on the student
+//TO verify whether application allows admin to generate report based on the teachers
 package com.training.sanity.tests;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
@@ -37,12 +40,11 @@ public class ELTC_054_Teachers {
 		screenShot = new ScreenShot(driver); 
 		// open the browser 
 		driver.get(baseUrl);
-		Thread.sleep(5000);
+		Wait = properties.getProperty("implicitWait");
 	}
 	@AfterTest
 	public void tearDown() throws Exception 
 	{
-		Thread.sleep(1000);
 		driver.close();
 	}
 	@Test (priority=1)
@@ -56,24 +58,31 @@ public class ELTC_054_Teachers {
 	}
 
 	@Test (priority=2)
-	public void ReportingTest() 
+	public void ReportingTest() throws AWTException, InterruptedException 
 	{
 		//Create object for TeacherPOM
 		TeachersPOM TeacherPOM = new  TeachersPOM(driver);	
 		TeacherPOM.ClickReportingtab();
+		Robot robot = new Robot();
 		Wait = properties.getProperty("implicitWait");
 		TeacherPOM.Clickteacherlink();
 		screenShot.captureScreenShot("26");
-		TeacherPOM.sendKeyword("emily");//keyword name is Entered in text box
+		TeacherPOM.sendKeyword("kavya");//keyword name is Entered in text box
 		TeacherPOM.Clicksearchbutton();	
 		screenShot.captureScreenShot("27");
 		TeacherPOM.Clickarrowlink();
 		screenShot.captureScreenShot("28");
+		/*robot.keyPress(KeyEvent.VK_PAGE_DOWN);
+		robot.keyRelease(KeyEvent.VK_PAGE_DOWN);*/
 		TeacherPOM.Clickcourselink();
 		screenShot.captureScreenShot("29");
-		TeacherPOM.Clickquizicon(); 	
-		screenShot.captureScreenShot("30");
+		TeacherPOM.Clickquizicon(); 		
+		screenShot.captureScreenShot("30");		
+		robot.keyPress(KeyEvent.VK_PAGE_DOWN);
+		robot.keyRelease(KeyEvent.VK_PAGE_DOWN);
 		TeacherPOM.ClickEmail();
+		robot.keyPress(KeyEvent.VK_PAGE_DOWN);
+		robot.keyRelease(KeyEvent.VK_PAGE_DOWN);
 		TeacherPOM.ClickCorrecttest();	
 		screenShot.captureScreenShot("31");
 		TeacherPOM.ClickCourseName();	
