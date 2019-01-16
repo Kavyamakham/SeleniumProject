@@ -1,101 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="10" passed="10">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Sample test Suite" duration-ms="331215" started-at="2019-01-03T15:26:18Z" finished-at="2019-01-03T15:31:49Z">
+  <suite name="Default suite" duration-ms="68467" started-at="2019-01-16T14:33:28Z" finished-at="2019-01-16T14:34:37Z">
     <groups>
     </groups>
-    <test name="Sample test" duration-ms="331215" started-at="2019-01-03T15:26:18Z" finished-at="2019-01-03T15:31:49Z">
-      <class name="com.training.sanity.tests.ELTC_053_Reporting">
-        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.sanity.tests.ELTC_053_Reporting@685cb137]" name="setUpBeforeClass" is-config="true" duration-ms="37649" started-at="2019-01-03T15:27:44Z" finished-at="2019-01-03T15:28:22Z">
+    <test name="Default test" duration-ms="68467" started-at="2019-01-16T14:33:28Z" finished-at="2019-01-16T14:34:37Z">
+      <class name="com.training.sanity.tests.ELTC_085">
+        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.sanity.tests.ELTC_085@1bce4f0a]" name="setUpBeforeClass" is-config="true" duration-ms="39550" started-at="2019-01-16T14:33:28Z" finished-at="2019-01-16T14:34:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeClass -->
-        <test-method status="PASS" signature="validLoginTest()[pri:1, instance:com.training.sanity.tests.ELTC_053_Reporting@685cb137]" name="validLoginTest" duration-ms="7902" started-at="2019-01-03T15:28:22Z" finished-at="2019-01-03T15:28:30Z">
+        <test-method status="PASS" signature="validLoginTest()[pri:1, instance:com.training.sanity.tests.ELTC_085@1bce4f0a]" name="validLoginTest" duration-ms="5697" started-at="2019-01-16T14:34:08Z" finished-at="2019-01-16T14:34:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validLoginTest -->
-        <test-method status="PASS" signature="ReportingTest()[pri:2, instance:com.training.sanity.tests.ELTC_053_Reporting@685cb137]" name="ReportingTest" duration-ms="20468" started-at="2019-01-03T15:30:29Z" finished-at="2019-01-03T15:30:49Z">
+        <test-method status="PASS" signature="AdduserTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.training.sanity.tests.ELTC_085@1bce4f0a]" name="AdduserTest" duration-ms="20758" started-at="2019-01-16T14:34:14Z" data-provider="db-inputs" finished-at="2019-01-16T14:34:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[manzoor]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[mehadi]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[manzoor@gmail.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[9876543210]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[manzoor]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[manzoor]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Trainer]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ReportingTest -->
-      </class> <!-- com.training.sanity.tests.ELTC_053_Reporting -->
-      <class name="com.training.sanity.tests.ELTC_055_Careers">
-        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.sanity.tests.ELTC_055_Careers@7cd62f43]" name="setUpBeforeClass" is-config="true" duration-ms="37016" started-at="2019-01-03T15:29:13Z" finished-at="2019-01-03T15:29:50Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpBeforeClass -->
-        <test-method status="PASS" signature="validLoginTest()[pri:1, instance:com.training.sanity.tests.ELTC_055_Careers@7cd62f43]" name="validLoginTest" duration-ms="4656" started-at="2019-01-03T15:29:50Z" finished-at="2019-01-03T15:29:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validLoginTest -->
-        <test-method status="PASS" signature="ReportingTest()[pri:2, instance:com.training.sanity.tests.ELTC_055_Careers@7cd62f43]" name="ReportingTest" duration-ms="31287" started-at="2019-01-03T15:31:15Z" finished-at="2019-01-03T15:31:46Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ReportingTest -->
-      </class> <!-- com.training.sanity.tests.ELTC_055_Careers -->
-      <class name="com.training.sanity.tests.ELTC_054_Teachers">
-        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.sanity.tests.ELTC_054_Teachers@6a41eaa2]" name="setUpBeforeClass" is-config="true" duration-ms="37310" started-at="2019-01-03T15:28:30Z" finished-at="2019-01-03T15:29:07Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpBeforeClass -->
-        <test-method status="PASS" signature="validLoginTest()[pri:1, instance:com.training.sanity.tests.ELTC_054_Teachers@6a41eaa2]" name="validLoginTest" duration-ms="5467" started-at="2019-01-03T15:29:07Z" finished-at="2019-01-03T15:29:13Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validLoginTest -->
-        <test-method status="PASS" signature="ReportingTest()[pri:2, instance:com.training.sanity.tests.ELTC_054_Teachers@6a41eaa2]" name="ReportingTest" duration-ms="25634" started-at="2019-01-03T15:30:49Z" finished-at="2019-01-03T15:31:15Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ReportingTest -->
-      </class> <!-- com.training.sanity.tests.ELTC_054_Teachers -->
-      <class name="com.training.sanity.tests.ELTC_052_SessionCategories">
-        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.sanity.tests.ELTC_052_SessionCategories@6a4f787b]" name="setUpBeforeClass" is-config="true" duration-ms="36318" started-at="2019-01-03T15:27:03Z" finished-at="2019-01-03T15:27:39Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpBeforeClass -->
-        <test-method status="PASS" signature="validLoginTest()[pri:1, instance:com.training.sanity.tests.ELTC_052_SessionCategories@6a4f787b]" name="validLoginTest" duration-ms="5244" started-at="2019-01-03T15:27:39Z" finished-at="2019-01-03T15:27:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validLoginTest -->
-        <test-method status="PASS" signature="SessionCategoriesTest()[pri:2, instance:com.training.sanity.tests.ELTC_052_SessionCategories@6a4f787b]" name="SessionCategoriesTest" duration-ms="24141" started-at="2019-01-03T15:30:05Z" finished-at="2019-01-03T15:30:29Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- SessionCategoriesTest -->
-      </class> <!-- com.training.sanity.tests.ELTC_052_SessionCategories -->
-      <class name="com.training.sanity.tests.ELTC_051_Userlist">
-        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.sanity.tests.ELTC_051_Userlist@604ed9f0]" name="setUpBeforeClass" is-config="true" duration-ms="38763" started-at="2019-01-03T15:26:18Z" finished-at="2019-01-03T15:26:57Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpBeforeClass -->
-        <test-method status="PASS" signature="validLoginTest()[pri:1, instance:com.training.sanity.tests.ELTC_051_Userlist@604ed9f0]" name="validLoginTest" duration-ms="6242" started-at="2019-01-03T15:26:57Z" finished-at="2019-01-03T15:27:03Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validLoginTest -->
-        <test-method status="PASS" signature="userlistTest()[pri:2, instance:com.training.sanity.tests.ELTC_051_Userlist@604ed9f0]" name="userlistTest" duration-ms="10190" started-at="2019-01-03T15:29:54Z" finished-at="2019-01-03T15:30:05Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- userlistTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.sanity.tests.ELTC_051_Userlist@604ed9f0]" name="tearDown" is-config="true" duration-ms="139" started-at="2019-01-03T15:31:46Z" finished-at="2019-01-03T15:31:46Z">
+        </test-method> <!-- AdduserTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.sanity.tests.ELTC_085@1bce4f0a]" name="tearDown" is-config="true" duration-ms="2139" started-at="2019-01-16T14:34:34Z" finished-at="2019-01-16T14:34:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.sanity.tests.ELTC_052_SessionCategories@6a4f787b]" name="tearDown" is-config="true" duration-ms="172" started-at="2019-01-03T15:31:46Z" finished-at="2019-01-03T15:31:46Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.sanity.tests.ELTC_053_Reporting@685cb137]" name="tearDown" is-config="true" duration-ms="239" started-at="2019-01-03T15:31:46Z" finished-at="2019-01-03T15:31:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.sanity.tests.ELTC_054_Teachers@6a41eaa2]" name="tearDown" is-config="true" duration-ms="189" started-at="2019-01-03T15:31:47Z" finished-at="2019-01-03T15:31:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.sanity.tests.ELTC_055_Careers@7cd62f43]" name="tearDown" is-config="true" duration-ms="2153" started-at="2019-01-03T15:31:47Z" finished-at="2019-01-03T15:31:49Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.training.sanity.tests.ELTC_051_Userlist -->
-    </test> <!-- Sample test -->
-  </suite> <!-- Sample test Suite -->
+      </class> <!-- com.training.sanity.tests.ELTC_085 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

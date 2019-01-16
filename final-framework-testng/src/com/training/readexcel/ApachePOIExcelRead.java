@@ -28,6 +28,7 @@ public class ApachePOIExcelRead {
 		try {
 			System.out.println("File Name  Got " + fileName);
 			FileInputStream file = new FileInputStream(new File(fileName));
+			
 
 			// Create Workbook instance holding reference to .xlsx file
 			XSSFWorkbook workbook = new XSSFWorkbook(file);
@@ -69,13 +70,23 @@ public class ApachePOIExcelRead {
 	}
 
 
-	
-	
+
+
 	public static void main(String[] args) {
-		String fileName = "C:/Users/Naveen/Desktop/Testing.xlsx";
+		//String fileName = "C:/Users/Naveen/Desktop/Testing.xlsx";
+		String fileName = "./resources/ExcelData1.xlsx";
+	
 
 		for (List<Object> temp : getExcelContent(fileName)) {
 			System.out.println(temp.get(0) + ", " + temp.get(1));
 		}
 	}
+
+
+
+
 }
+
+
+
+

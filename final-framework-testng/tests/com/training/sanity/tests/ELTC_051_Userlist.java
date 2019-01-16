@@ -41,7 +41,7 @@ public class ELTC_051_Userlist {
 		Wait = properties.getProperty("implicitWait");
 		// open the browser 
 		driver.get(baseUrl);
-		Wait = properties.getProperty("implicitWait");
+		
 		
 	}
 

@@ -3,21 +3,6 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Sample test Suite]">
   <test thread-count="5" name="Sample test(failed)">
     <classes>
-      <class name="com.training.sanity.tests.ELTC_052_SessionCategories">
-        <methods>
-          <include name="tearDown"/>
-          <include name="SessionCategoriesTest"/>
-          <include name="setUpBeforeClass"/>
-        </methods>
-      </class> <!-- com.training.sanity.tests.ELTC_052_SessionCategories -->
-      <class name="com.training.sanity.tests.LoginTests">
-        <methods>
-          <include name="setUpBeforeClass"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="validLoginTest"/>
-        </methods>
-      </class> <!-- com.training.sanity.tests.LoginTests -->
       <class name="com.training.sanity.tests.ELTC_055_Careers">
         <methods>
           <include name="tearDown"/>
